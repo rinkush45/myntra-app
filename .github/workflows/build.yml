@@ -37,4 +37,6 @@ jobs:
           docker push rinkusharma98/myntra:latest
         env:
           DOCKER_CLI_ACI: 1
+      - name: Run the container
+        run: docker run -d --name myntra -p 3000:3000 rinkusharma98/myntra:latest
         
