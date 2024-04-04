@@ -24,9 +24,9 @@ jobs:
       #   timeout-minutes: 5
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  - name: NPM Install
+      - name: NPM Install
         run: npm install # Add your specific npm install command
-  - name: Docker Login
+      - name: Docker Login
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Docker Scout Scan
         run: |
